@@ -13,15 +13,12 @@ let computerChoice = getComputerChoice();
 
 function getHumanChoice() {
     let userChoice = prompt("Enter Rock, Paper, or Scissors").toLowerCase();
-    return userChoice;
-    
+    return userChoice;   
 }
-
 let humanChoice = getHumanChoice();
 
-// humanScore starting at 0
-
-// computerScore starting at 0
+let humanScore = 0;
+let computerScore = 0;
 
 // take human and computers choices into a function
     // play a single round comparing choices and increase the winners score by 1
