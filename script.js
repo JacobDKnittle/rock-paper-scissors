@@ -1,12 +1,22 @@
-// get the computers choice
-    // use math.random to get a random number
-    // use random number in range to pick a choice
-    // returns rock, paper, or scissors
 
-// takes user choice and returns it
+function getComputerChoice() {
+    let randomNumber = Math.floor(Math.random() * 3);
+    if (randomNumber === 0) {
+        return 'Rock';
+    } else if (randomNumber === 1) {
+        return 'Paper';
+    } else if (randomNumber === 2) {
+        return 'Scissors';
+    }
+}
+let computerChoice = getComputerChoice();
+
+function getHumanChoice() {
+    // takes user choice and returns it
     // prompt user for input and assume its valid, make sure its case insensitive
     // test return with console.log
     // return the choice
+}
 
 // humanScore starting at 0
 
