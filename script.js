@@ -12,11 +12,12 @@ function getComputerChoice() {
 let computerChoice = getComputerChoice();
 
 function getHumanChoice() {
-    // takes user choice and returns it
-    // prompt user for input and assume its valid, make sure its case insensitive
-    // test return with console.log
-    // return the choice
+    let userChoice = prompt("Enter Rock, Paper, or Scissors").toLowerCase();
+    return userChoice;
+    
 }
+
+let humanChoice = getHumanChoice();
 
 // humanScore starting at 0
 
