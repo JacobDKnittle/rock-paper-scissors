@@ -18,9 +18,6 @@ function getHumanChoice() {
 
 let humanChoice = getHumanChoice();
 
-let humanScore = 0;
-let computerScore = 0;
-
 function playRound(humanChoice, computerChoice) {
   // play a single round comparing choices and increase the winners score by 1
   // scenarios human wins
@@ -46,7 +43,14 @@ function playRound(humanChoice, computerChoice) {
   
 }
 
-playRound(humanChoice, computerChoice)
 
 // playGame function that calls playRound 5 times
+function playGame(humanChoice, computerChoice) {
+  let humanScore = 0;
+  let computerScore = 0;
+  for (let i = 0; i < 5; i++) {
+    playRound(humanChoice, computerChoice)
+  }
+}
 // move playRound and score Variables inside playGame
+playGame(humanChoice, computerChoice)
