@@ -9,24 +9,22 @@ function getComputerChoice() {
     return "scissors";
   }
 }
-let computerChoice = getComputerChoice();
 
 function getHumanChoice() {
   let userChoice = prompt("Enter Rock, Paper, or Scissors").toLowerCase();
   return userChoice;
 }
 
-let humanChoice = getHumanChoice();
-
-function playRound(humanChoice, computerChoice) {
+function playRound() {
   // play a single round comparing choices and increase the winners score by 1
+  let humanChoice = getHumanChoice();
+  let computerChoice = getComputerChoice();
   // scenarios human wins
   if (
     (humanChoice === "rock" && computerChoice === "scissors") ||
     (humanChoice === "paper" && computerChoice === "rock") ||
     (humanChoice === "scissors" && computerChoice === 'paper')
   ) {
-    humanScore++;
     console.log("Player wins round.");
   }
   // scenarios computer wins
@@ -35,7 +33,6 @@ function playRound(humanChoice, computerChoice) {
     (computerChoice === "paper" && humanChoice === "rock") ||
     (computerChoice === "scissors" && humanChoice === 'paper')
   ) {
-    computerScore++;
     console.log("Computer wins round.");
   } else {
     console.log("Tie!");
@@ -45,12 +42,11 @@ function playRound(humanChoice, computerChoice) {
 
 
 // playGame function that calls playRound 5 times
-function playGame(humanChoice, computerChoice) {
+function playGame() {
   let humanScore = 0;
   let computerScore = 0;
   for (let i = 0; i < 5; i++) {
-    playRound(humanChoice, computerChoice)
+    playRound()
   }
 }
-// move playRound and score Variables inside playGame
-playGame(humanChoice, computerChoice)
+playGame()
