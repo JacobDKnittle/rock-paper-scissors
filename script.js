@@ -1,6 +1,13 @@
 let humanScore = 0;
 let computerScore = 0;
 
+const choiceButtons = document.querySelectorAll('button');
+choiceButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    console.log(button.textContent.toLowerCase());
+    playRound(button.textContent)
+  })
+})
 
 function getComputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3);
@@ -13,14 +20,10 @@ function getComputerChoice() {
   }
 }
 
-function getHumanChoice() {
-  let userChoice = prompt("Enter Rock, Paper, or Scissors").toLowerCase();
-  return userChoice;
-}
 
 // play a single round comparing choices and increase the winners score by 1
-function playRound() {
-  let humanChoice = getHumanChoice();
+function playRound(humanSelection) {
+  let humanChoice = humanSelection;
   let computerChoice = getComputerChoice();
   // scenarios human wins
   if (
