@@ -32,7 +32,6 @@ function getComputerChoice() {
 // play a single round comparing choices and increase the winners score by 1
 function playRound(humanSelection) {
   let humanChoice = humanSelection;
-  // console.log(humanChoice)
   let computerChoice = getComputerChoice();
   // scenarios human wins
   if (
@@ -40,7 +39,6 @@ function playRound(humanSelection) {
     (humanChoice === "paper" && computerChoice === "rock") ||
     (humanChoice === "scissors" && computerChoice === 'paper')
   ) {
-    // console.log("Player wins round.");
     humanScore++;
     playerScoreDisplay.textContent = `Player Score: ${humanScore}`;
     result.textContent += 'Player wins round!';
@@ -51,7 +49,7 @@ function playRound(humanSelection) {
     (computerChoice === "paper" && humanChoice === "rock") ||
     (computerChoice === "scissors" && humanChoice === 'paper')
   ) {
-    // console.log("Computer wins round.");
+    
     computerScore++;
     computerScoreDisplay.textContent = `Computer Score: ${computerScore}`;
     result.textContent += 'Computer wins round!';
