@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 
 function getComputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3);
@@ -55,20 +58,16 @@ function determineWinner(humanScore, computerScore){
 }
 
 
-// playGame function that calls playRound 5 times
-function playGame() {
-  let humanScore = 0;
-  let computerScore = 0;
-  let roundWinner;
-  for (let i = 0; i < 5; i++) {
-    roundWinner = playRound();
-    if (roundWinner === 'player wins round') {
-      humanScore++;
-    }
-    else if (roundWinner === 'computer wins round') {
-      computerScore++;
-    }
-  }
-  determineWinner(humanScore, computerScore);
-}
-playGame();
+
+ 
+  // let roundWinner;
+  
+  //   roundWinner = playRound();
+  //   if (roundWinner === 'player wins round') {
+  //     humanScore++;
+  //   }
+  //   else if (roundWinner === 'computer wins round') {
+  //     computerScore++;
+  //   }
+  
+  // determineWinner(humanScore, computerScore);
