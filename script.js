@@ -12,7 +12,8 @@ const choiceButtons = document.querySelectorAll('button');
 choiceButtons.forEach((button) => {
   button.addEventListener('click', () => {
     result.textContent = 'Result: ';
-    playRound(button.textContent.toLowerCase())
+    playRound(button.textContent.toLowerCase());
+    checkForWinner(humanScore, computerScore);
   })
 })
 
@@ -60,29 +61,12 @@ function playRound(humanSelection) {
   
 }
 
-// function determineWinner(humanScore, computerScore){
-//   if (humanScore > computerScore){
-//     console.log('Player Wins Game!')
-//   }
-//   else if (computerScore > humanScore){
-//     console.log('Computer Wins Game!');
-//   }
-//   else {
-//     console.log('Game is a Tie!');
-//   }
-// }
+function checkForWinner(humanScore, computerScore){
+    if (humanScore === 5) {
+      result.textContent = 'Result: Player Wins!'
+    }
+    else if (computerScore === 5) {
+      result.textContent = 'Result: Computer Wins!'
+    }  
+  }
 
-
-
- 
-  // let roundWinner;
-  
-  //   roundWinner = playRound();
-  //   if (roundWinner === 'player wins round') {
-  //     humanScore++;
-  //   }
-  //   else if (roundWinner === 'computer wins round') {
-  //     computerScore++;
-  //   }
-  
-  // determineWinner(humanScore, computerScore);
